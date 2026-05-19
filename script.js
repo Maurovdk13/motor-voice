@@ -22,11 +22,11 @@ const motors = [
   },
   {
     brand: "Honda",
-    image: "images/Honda.avif"
+    image: "images/honda.avif"
   },
   {
     brand: "Yamaha",
-    image: "images/Yamaha.jpg"
+    image: "images/yamaha.jpg"
   }
 ];
 
