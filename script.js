@@ -96,7 +96,7 @@ function startListening() {
 
     // Alleen accepteren als AI zeker genoeg is
     if (
-      highestScore > 0.90 &&
+      highestScore > 0.80 &&
       canGuess &&
       prediction !== "Achtergrondruis"
     ) {
@@ -109,7 +109,7 @@ function startListening() {
 
   }, {
     includeSpectrogram: true,
-    probabilityThreshold: 0.90,
+    probabilityThreshold: 0.80,
     invokeCallbackOnNoiseAndUnknown: false,
     overlapFactor: 0.3
   });
