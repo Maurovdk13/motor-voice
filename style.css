@@ -85,3 +85,11 @@ button:hover {
   font-size: 32px;
   font-weight: bold;
 }
+
+#resetBtn {
+  background: #f59e0b;
+}
+
+#resetBtn:hover {
+  background: #d97706;
+}

@@ -4,6 +4,7 @@ const scoreText = document.getElementById("score");
 const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
 const stopBtn = document.getElementById("stopBtn");
+const resetBtn = document.getElementById("resetBtn");
 
 // JOUW TEACHABLE MACHINE URL
 const URL = "https://teachablemachine.withgoogle.com/models/lvYjdFs9u/";
@@ -179,5 +180,16 @@ stopBtn.addEventListener("click", () => {
     startBtn.disabled = false;
 
   }
+
+});
+
+// RESET HIGHSCORE
+resetBtn.addEventListener("click", () => {
+
+  highscore = 0;
+
+  localStorage.setItem("highscore", 0);
+
+  highscoreText.textContent = 0;
 
 });
