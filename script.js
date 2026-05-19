@@ -5,7 +5,7 @@ const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
 
 // PLAK HIER JE TEACHABLE MACHINE URL
-const URL = "PASTE_YOUR_MODEL_URL_HERE/";
+const URL = "https://teachablemachine.withgoogle.com/models/[...]/";
 
 let recognizer;
 let currentMotor;
