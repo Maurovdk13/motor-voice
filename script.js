@@ -14,23 +14,23 @@ let score = 0;
 const motors = [
   {
     brand: "Kawasaki",
-    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200"
+    image: "images/kawasaki.jpg"
   },
   {
     brand: "Honda",
-    image: "https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1200"
+    image: "images/Honda.avif"
   },
   {
     brand: "Yamaha",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200"
+    image: "images/Yamaha.jpg"
   },
   {
     brand: "BMW",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200"
+    image: "images/Bmw.avif"
   },
   {
     brand: "Ducati",
-    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200"
+    image: "images/Ducati.jpg"
   }
 ];
 
