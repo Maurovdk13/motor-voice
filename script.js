@@ -64,7 +64,7 @@ async function createModel() {
 
     startListening();
 
-  } catch(error) {
+  } catch (error) {
 
     console.error("ERROR LOADING MODEL:", error);
 
@@ -95,7 +95,11 @@ function startListening() {
     console.log("Confidence:", highestScore);
 
     // Alleen accepteren als AI zeker genoeg is
-    if (highestScore > 0.90 && canGuess) {
+    if (
+      highestScore > 0.90 &&
+      canGuess &&
+      prediction !== "Achtergrondruis"
+    ) {
 
       canGuess = false;
 
