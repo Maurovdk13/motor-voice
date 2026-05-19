@@ -4,7 +4,7 @@ const scoreText = document.getElementById("score");
 const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
 
-// PLAK HIER JE ECHTE TEACHABLE MACHINE URL
+// JOUW TEACHABLE MACHINE URL
 const URL = "https://teachablemachine.withgoogle.com/models/aSdr7K7sL/";
 
 // Variabelen
@@ -26,14 +26,6 @@ const motors = [
   {
     brand: "Yamaha",
     image: "images/Yamaha.jpg"
-  },
-  {
-    brand: "BMW",
-    image: "images/Bmw.avif"
-  },
-  {
-    brand: "Ducati",
-    image: "images/Ducati.jpg"
   }
 ];
 
@@ -100,24 +92,22 @@ function startListening() {
     }
 
     console.log("Prediction:", prediction);
+    console.log("Confidence:", highestScore);
 
-    if (highestScore > 0.95) {
+    // Alleen accepteren als AI zeker genoeg is
+    if (highestScore > 0.80 && canGuess) {
 
-      if (canGuess) {
+      canGuess = false;
 
-  canGuess = false;
-
-  checkAnswer(prediction);
-
-}
+      checkAnswer(prediction);
 
     }
 
   }, {
     includeSpectrogram: true,
-    probabilityThreshold: 0.95,
-    invokeCallbackOnNoiseAndUnknown: true,
-    overlapFactor: 0.5
+    probabilityThreshold: 0.80,
+    invokeCallbackOnNoiseAndUnknown: false,
+    overlapFactor: 0.3
   });
 
 }
@@ -141,8 +131,6 @@ function checkAnswer(prediction) {
       localStorage.setItem("highscore", highscore);
 
       highscoreText.textContent = highscore;
-
-      console.log(prediction, highestScore);
 
     }
 
