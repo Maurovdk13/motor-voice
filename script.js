@@ -5,7 +5,7 @@ const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
 
 // PLAK HIER JE ECHTE TEACHABLE MACHINE URL
-const URL = "https://teachablemachine.withgoogle.com/models/i6QYyJ3G-/";
+const URL = "https://teachablemachine.withgoogle.com/models/aSdr7K7sL/";
 
 // Variabelen
 let recognizer;
@@ -142,6 +142,8 @@ function checkAnswer(prediction) {
 
       highscoreText.textContent = highscore;
 
+      console.log(prediction, highestScore);
+
     }
 
   } else {
@@ -156,7 +158,7 @@ function checkAnswer(prediction) {
     showRandomMotor();
 
     resultText.innerHTML = "Say the motorcycle brand...";
-    
+
     canGuess = true;
 
   }, 2000);
