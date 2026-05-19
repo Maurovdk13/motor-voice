@@ -11,6 +11,7 @@ const URL = "https://teachablemachine.withgoogle.com/models/i6QYyJ3G-/";
 let recognizer;
 let currentMotor;
 let score = 0;
+let canGuess = true;
 
 // Motoren lijst
 const motors = [
@@ -100,15 +101,21 @@ function startListening() {
 
     console.log("Prediction:", prediction);
 
-    if (highestScore > 0.75) {
+    if (highestScore > 0.95) {
 
-      checkAnswer(prediction);
+      if (canGuess) {
+
+  canGuess = false;
+
+  checkAnswer(prediction);
+
+}
 
     }
 
   }, {
     includeSpectrogram: true,
-    probabilityThreshold: 0.75,
+    probabilityThreshold: 0.95,
     invokeCallbackOnNoiseAndUnknown: true,
     overlapFactor: 0.5
   });
@@ -149,6 +156,8 @@ function checkAnswer(prediction) {
     showRandomMotor();
 
     resultText.innerHTML = "Say the motorcycle brand...";
+    
+    canGuess = true;
 
   }, 2000);
 
