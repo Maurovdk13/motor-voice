@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motor Voice Game</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/speech@latest/dist/teachablemachine-speech.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>🏍 Motor Voice Guessing Game</h1>
+
+    <img id="motorImage" src="" alt="Motorcycle">
+
+    <div class="info">
+      <p>Score: <span id="score">0</span></p>
+      <p>Highscore: <span id="highscore">0</span></p>
+    </div>
+
+    <button id="startBtn">Start Guessing</button>
+
+    <h2 id="result">Say the motorcycle brand...</h2>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
