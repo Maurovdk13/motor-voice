@@ -3,6 +3,7 @@ const resultText = document.getElementById("result");
 const scoreText = document.getElementById("score");
 const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
+const stopBtn = document.getElementById("stopBtn");
 
 // JOUW TEACHABLE MACHINE URL
 const URL = "https://teachablemachine.withgoogle.com/models/lvYjdFs9u/";
@@ -163,5 +164,20 @@ startBtn.addEventListener("click", async () => {
   await createModel();
 
   startBtn.disabled = true;
+
+});
+
+// STOP BUTTON
+stopBtn.addEventListener("click", () => {
+
+  if (recognizer) {
+
+    recognizer.stopListening();
+
+    resultText.innerHTML = "🛑 Listening stopped";
+
+    startBtn.disabled = false;
+
+  }
 
 });
