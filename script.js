@@ -18,15 +18,15 @@ let canGuess = true;
 const motors = [
   {
     brand: "Kawasaki",
-    image: "images/kawasaki.jpg"
+    image: "images/Kawasaki.jpg"
   },
   {
     brand: "Honda",
-    image: "images/honda.avif"
+    image: "images/Honda.avif"
   },
   {
     brand: "Yamaha",
-    image: "images/yamaha.jpg"
+    image: "images/Yamaha.jpg"
   }
 ];
 
