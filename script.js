@@ -5,7 +5,7 @@ const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
 
 // JOUW TEACHABLE MACHINE URL
-const URL = "https://teachablemachine.withgoogle.com/models/aSdr7K7sL/";
+const URL = "https://teachablemachine.withgoogle.com/models/lvYjdFs9u/";
 
 // Variabelen
 let recognizer;
@@ -95,7 +95,7 @@ function startListening() {
     console.log("Confidence:", highestScore);
 
     // Alleen accepteren als AI zeker genoeg is
-    if (highestScore > 0.80 && canGuess) {
+    if (highestScore > 0.90 && canGuess) {
 
       canGuess = false;
 
@@ -105,7 +105,7 @@ function startListening() {
 
   }, {
     includeSpectrogram: true,
-    probabilityThreshold: 0.80,
+    probabilityThreshold: 0.90,
     invokeCallbackOnNoiseAndUnknown: false,
     overlapFactor: 0.3
   });
