@@ -52,3 +52,18 @@ button:hover {
   gap: 30px;
   margin-bottom: 20px;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#stopBtn {
+  background: #dc2626;
+}
+
+#stopBtn:hover {
+  background: #b91c1c;
+}
