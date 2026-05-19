@@ -5,7 +5,7 @@ const highscoreText = document.getElementById("highscore");
 const startBtn = document.getElementById("startBtn");
 
 // PLAK HIER JE ECHTE TEACHABLE MACHINE URL
-const URL = "https://teachablemachine.withgoogle.com/models/[...]/";
+const URL = "https://teachablemachine.withgoogle.com/models/i6QYyJ3G-/";
 
 // Variabelen
 let recognizer;
